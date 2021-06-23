@@ -1,0 +1,15 @@
+<testExecutions version="1">
+<file path="test\test.js">
+<testCase name="====COMMON TESTS====: invalid route should throw internal server error" duration="15"/>
+<testCase name="====CAR TESTS====: It should retrieve all cars" duration="372"/>
+<testCase name="====CAR TESTS====: should retrieve a car" duration="63"/>
+<testCase name="====CAR TESTS====: can register a car" duration="45"/>
+<testCase name="====MOCK TESTS====: can retrieve all histories" duration="2"/>
+<testCase name="====MOCK TESTS====: can retrieve specific order" duration="3"/>
+<testCase name="====MOCK TESTS====: can retrieve charging facility" duration="3"/>
+<testCase name="====MOCK TESTS====: can retrieve all charging facilities" duration="2"/>
+<testCase name="====MOCK TESTS====: can retrieve all payments" duration="4"/>
+<testCase name="====MOCK TESTS====: can retrieve parking facility" duration="2"/>
+<testCase name="====MOCK TESTS====: can retrieve specific payment" duration="2"/>
+</file>
+</testExecutions>

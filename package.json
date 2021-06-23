@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "merd": "0.0.4",
+    "mocha-sonarqube-reporter": "^1.0.2",
     "nodemon": "^2.0.2"
   }
 }
