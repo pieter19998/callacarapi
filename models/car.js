@@ -32,7 +32,7 @@ carScheme.methods.checkAvailability = function() {
         this.available = false;
     }
 
-    if (this.seatscurrent < this.seatsmax && this.batterycount > this.batterycount ) {
+    if (this.seatscurrent < this.seatsmax && this.batterycount > this.batterycountmin ) {
         this.available = true;
     }
 };
