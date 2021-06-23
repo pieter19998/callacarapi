@@ -1,0 +1,17 @@
+[
+  {
+    "address": "221B Baker Street",
+    "chargercount": "10",
+    "maxchargercount": "15"
+  },
+  {
+    "address": "21 Downing Street",
+    "chargercount": "50",
+    "maxchargercount": "50"
+  },
+  {
+    "address": "50 Wellfield Road",
+    "chargercount": "20",
+    "maxchargercount": "30"
+  }
+]

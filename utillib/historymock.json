@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "from": "origin",
+      "to": "destination",
+      "departuretime" : "19:44",
+      "arrivaltime" : "20:00",
+      "price" : "100",
+      "car" : "6058b02b36f37946d82734b3"
+    },
+    {
+      "id": 2,
+      "from": "origin",
+      "to": "destination",
+      "departuretime" : "08:40",
+      "arrivaltime" : "9:25",
+      "price" : "50",
+      "car" : "6058b02b36f37946d82734b3"
+    }
+]

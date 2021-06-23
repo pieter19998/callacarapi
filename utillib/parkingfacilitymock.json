@@ -1,0 +1,17 @@
+[
+  {
+    "address": "221B Baker Street",
+    "storagecount": "10",
+    "maxstoragecount": "15"
+  },
+  {
+    "address": "21 Downing Street",
+    "storagecount": "50",
+    "maxstoragecount": "50"
+  },
+  {
+    "address": "50 Wellfield Road",
+    "storagecount": "20",
+    "maxstoragecount": "30"
+  }
+]
