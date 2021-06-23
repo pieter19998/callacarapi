@@ -82,7 +82,7 @@ exports.deleteCar = async (req, res, next) => {
         })
     }
 
-    car = await Car.findByIdAndDelete(req.params.id);
+    await Car.findByIdAndDelete(req.params.id);
 
     res.status(200).json({
         success: true,
@@ -90,7 +90,6 @@ exports.deleteCar = async (req, res, next) => {
     })
 };
 
-//todo: bugfix async error middleware
 //create a new car => /api/v1/car/register
 exports.registerCar = async (req, res, next) => {
     const body = req.body;
@@ -98,7 +97,7 @@ exports.registerCar = async (req, res, next) => {
         res.status(500).end();
     }
     try {
-        const car = await Car.create(req.body);
+        const car = await Car.create(body);
         res.status(200).json({
             success: true,
             message: 'car registered',
