@@ -31,7 +31,6 @@ app.use('/api/v1', auth);
 app.use('/api/v1', mock);
 
 //middleware setup
-//app.use(errorMiddleware);
 //fallback route
 app.all('*', (req,res,next) => {
     next('route not found');
@@ -40,12 +39,6 @@ app.all('*', (req,res,next) => {
 
 
 const PORT = process.env.PORT;
-//if(!module.parent) {
     module.exports = app.listen(PORT, () => {
         console.log(`Server running on port ${process.env.PORT} in mode: ${process.env.NODE_ENV}`);
     });
-//}
-
-
-
-//module.exports = app.listen(3000);

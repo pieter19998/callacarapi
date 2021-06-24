@@ -55,7 +55,6 @@ describe('====CAR TESTS====', () => {
                 .get("/api/v1/cars")
                 .end((err, res) => {
                     res.should.have.status(200);
-                    //res.body.should.be.a('array');
                     done();
                 })
         });
@@ -63,7 +62,6 @@ describe('====CAR TESTS====', () => {
 
     //test get car by id
     it('should retrieve a car', (done) => {
-        //chai.request('http://localhost:3000')
         chai.request(server)
             .get('/api/v1/car/6058b02b36f37946d82734b3').end((err, res) => {
             res.should.have.status(404);
@@ -93,18 +91,6 @@ describe('====CAR TESTS====', () => {
 });
 
 describe('====MOCK TESTS====', () => {
-   // it('can retrieve specific history', (done) => {
-   //     chai.request(server)
-   //         .get('/api/v1/mock/history/6058b02b36f37946d82734b4')
-   //         .end((err, res) => {
-   //             res.should.have.status(200);
-   //             //res.body.should.contain.a('object');
-   //             res.body.should.have.property('success');
-   //             res.body.should.have.property('message');
-   //             res.body.should.have.property('data');
-   //             done();
-   //         })
-   // });
     it('can retrieve all histories', (done) => {
         chai.request(server)
             .get('/api/v1/mock/histories')

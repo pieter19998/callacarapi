@@ -11,9 +11,6 @@ const User = require('../models/user');
 //================================
 //          USER MOCK
 //================================
-// var user = new User({
-//
-// })
 
 //================================
 //          HISTORY MOCK
@@ -39,7 +36,7 @@ var history2 = new History({
 
 //get specific history
 exports.getHistory = (req,res,next) => {
-    //   const role = req.body.role;
+
     if (role != null) {
         if (role === 'user') {
             res.status(401).json({
@@ -49,16 +46,15 @@ exports.getHistory = (req,res,next) => {
             });
         }
     }
-        //  if (role === 'auth') {
+
         res.status(200).json({
             success: true,
             message: 'mock api retrieval of history successful',
             data: ''
         })
-        //  }
+
 };
 
-//};
 let historymock = require('../utillib/historymock.json');
 
 //get all history
@@ -66,7 +62,6 @@ exports.getHistories = (req, res, next) => {
     res.status(200).json({
         success : true,
         message : 'mock api retrieval of histories successful',
-      //  data : "[" + history1 + "," + history2 + "]"
         data: historymock
     })
 };
@@ -80,7 +75,7 @@ var order1 = new Order({
     car : '6058b02b36f37946d82734b3',
     destination : '4 Privet Drive, Surrey'
 });
-exports.getOrder = (req, res, next) => {
+exports.getOrder = (req, res) => {
   res.status(200).json({
       success : true,
       message : 'mock api retrieval of order successful',
@@ -89,7 +84,7 @@ exports.getOrder = (req, res, next) => {
 };
 
 let ordermock = require('../utillib/ordermock.json');
-exports.getOrders = (req, res, next) => {
+exports.getOrders = (req, res) => {
     res.status(200).json({
         success : true,
         message : 'mock api retrieval of orders successful',
@@ -99,7 +94,7 @@ exports.getOrders = (req, res, next) => {
 //================================
 //          PAYMENT MOCK
 //================================
-exports.submitPayment = (req, res, next) => {
+exports.submitPayment = (req, res) => {
     res.status(200).json({
         success : true,
         message : 'Transaction completed'
@@ -129,9 +124,7 @@ var car1 = new Car({
 
 exports.chargeCar = (req, res, next) => {
     //happens for specific charging facility with predetermined car
-    //todo: update charging facility - availability count --> referenced via id specified in car object
     var charge = car1.charge();
-    //chargingfacility.updatechargercount(1);
     if (charge) {
         res.status(200).json({
             success: true,
@@ -148,8 +141,6 @@ exports.chargeCar = (req, res, next) => {
 };
 
 let chargingfacilitymock = require('../utillib/chargingfacilitymock.json');
-
-//todo: add route call to update charging facility availability
 //get all charging facilities
 exports.getChargingFacility = (req, res, next) => {
     res.status(200).json({

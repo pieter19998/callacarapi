@@ -23,12 +23,8 @@ const chargingfacilityScheme = new mongoose.Schema({
     };
 
     chargingfacilityScheme.methods.updatechargercount = function(val) {
-        chargercount += val;
-        if (chargercount > maxchargercount) {
-            return false;
-        } else {
-            return true;
-        }
+        this.chargercount += val;
+        return (chargercount > maxchargercount)
 }
 
     chargingfacilityScheme.methods.addChargeCar = function(toadd) {
@@ -39,7 +35,6 @@ const chargingfacilityScheme = new mongoose.Schema({
     };
     chargingfacilityScheme.updateObsolete = function() {
         for (var i = 0; i < this.cararr.size(); i++) {
-            var id = this.cararr.get(i);
         }
     };
     chargingfacilityScheme.updateb = function(car) {

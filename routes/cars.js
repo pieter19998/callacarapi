@@ -10,7 +10,5 @@ router.route('/car/register').post(registerCar);
 
 router.route('/car/:id').put(updateCar).delete(deleteCar);
 
-//todo: add car statistics via aggregation
-
 
 module.exports = router; // export router for main server use

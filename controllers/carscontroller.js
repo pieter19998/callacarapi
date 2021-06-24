@@ -59,9 +59,10 @@ exports.updateCar = async (req, res, next) => {
     })
 };
 
-exports.deleteCar = async (req, res) => {;
+exports.deleteCar = async (req, res) => {
+    let car = undefined
     try {
-        const car = await Car.findById(req.params.id);
+        car = await Car.findById(req.params.id);
     } catch (err) {
         res.status(500).json({
             success: false,
